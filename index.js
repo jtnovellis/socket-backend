@@ -6,7 +6,7 @@ const cors = require('cors');
 
 const PORT = process.env.PORT || 8080;
 const corsOptions = {
-  origin: 'https://sokeck-frontend.vercel.app',
+  origin: 'https://socket-demo-jond.herokuapp.com',
   optionsSuccessStatus: 200,
 };
 const app = express();
