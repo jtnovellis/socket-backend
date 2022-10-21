@@ -5,13 +5,16 @@ const http = require('http');
 const cors = require('cors');
 
 const PORT = process.env.PORT || 8080;
-
+const corsOptions = {
+  origin: 'https://sokeck-frontend.vercel.app',
+  optionsSuccessStatus: 200,
+};
 const app = express();
-app.use(cors());
+app.use(cors(corsOptions));
 const server = http.createServer(app);
 const io = socketIO(server, {
   cors: {
-    origin: 'http://localhost:3000',
+    origin: 'https://sokeck-frontend.vercel.app',
     method: ['GET', 'POST'],
   },
 });
