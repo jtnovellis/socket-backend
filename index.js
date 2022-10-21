@@ -9,7 +9,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server, {
   cors: {
-    origin: 'https://sokeck-frontend.vercel.app',
+    origin: process.env.CLIENT_URL,
     method: ['GET', 'POST'],
   },
 });
