@@ -14,7 +14,7 @@ app.use(cors(corsOptions));
 const server = http.createServer(app);
 const io = socketIO(server, {
   cors: {
-    origin: 'https://sokeck-frontend.vercel.app',
+    origin: 'https://socket-demo-jond.herokuapp.com',
     method: ['GET', 'POST'],
   },
 });
