@@ -9,7 +9,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server, {
   cors: {
-    origin: process.env.LOCAL_URL || 'http://localhost:3000',
+    origin: 'https://sokeck-frontend.vercel.app/',
     method: ['GET', 'POST'],
   },
 });
