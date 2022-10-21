@@ -17,7 +17,6 @@ const io = socketIO(server, {
 io.on('connection', (socket) => {
   console.log('New connection');
   socket.on('Channel', ({ user, message }) => {
-    console.log({ user, message });
     if (!message) {
       io.emit('broadcast', user);
     } else {
